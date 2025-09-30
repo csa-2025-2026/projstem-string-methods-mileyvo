@@ -3,10 +3,10 @@ public class Main
   public static void main(String[] args)
   {
     // write your code here
-    
-    
-    
     lastFirstN("cream", "butter", 3);
+    stringManip("pumpkin", "muffin");
+    System.out.println(removeStr("badaboom", "ada"));
+
   }
 
   /** Precondition: s1 and s2 are not null
@@ -56,7 +56,11 @@ public class Main
   */
   public static String removeStr(String s1, String s2)
   {
-    String output = null;
+    int n = s1.indexOf(s2);
+
+    int index = s1.indexOf(s2);
+    String output = s1.substring(0, index) + s1.substring(index + s2.length());
+   
     return output;
   }
 }
